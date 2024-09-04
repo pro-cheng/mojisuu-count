@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字数カウント | 簡単・無料のオンラインツール</title>
+    <meta name="description" content="文章の文字数、単語数、行数を簡単にカウントできる無料のオンラインツールです。SEO対策、SNS投稿、論文作成に最適。">
+    <meta name="keywords" content="文字数カウント,字数カウント,文字カウンター,単語数,行数,SEO,SNS">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+        .count-item {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>文字数カウント</h1>
+    <p>テキストを入力して、文字数、単語数、行数を自動的にカウントします。</p>
+    <textarea id="input-text" placeholder="ここにテキストを入力してください..."></textarea>
+    <div id="result">
+        <div class="count-item">文字数（空白含む）: <span id="char-count">0</span></div>
+        <div class="count-item">文字数（空白除く）: <span id="char-count-no-spaces">0</span></div>
+        <div class="count-item">単語数: <span id="word-count">0</span></div>
+        <div class="count-item">行数: <span id="line-count">0</span></div>
+    </div>
+
+    <script>
+        const inputText = document.getElementById('input-text');
+        const charCount = document.getElementById('char-count');
+        const charCountNoSpaces = document.getElementById('char-count-no-spaces');
+        const wordCount = document.getElementById('word-count');
+        const lineCount = document.getElementById('line-count');
+
+        inputText.addEventListener('input', updateCounts);
+
+        function updateCounts() {
+            const text = inputText.value;
+            charCount.textContent = text.length;
+            charCountNoSpaces.textContent = text.replace(/\s/g, '').length;
+            wordCount.textContent = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+            lineCount.textContent = text.split('\n').length;
+        }
+    </script>
+</body>
+</html>
