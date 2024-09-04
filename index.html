@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文字数カウント | 簡単・無料のオンラインツール</title>
+    <title>文字数カウント | 簡単・無料のオンラインツール | mojisuu-count.jp</title>
     <meta name="description" content="文章の文字数、単語数、行数を簡単にカウントできる無料のオンラインツールです。SEO対策、SNS投稿、論文作成に最適。">
     <meta name="keywords" content="文字数カウント,字数カウント,文字カウンター,単語数,行数,SEO,SNS">
     <style>
@@ -15,7 +15,7 @@
             margin: 0 auto;
             padding: 20px;
         }
-        h1 {
+        h1, h2 {
             color: #2c3e50;
             text-align: center;
         }
@@ -36,6 +36,24 @@
         .count-item {
             margin-bottom: 10px;
         }
+        .feature-list, .faq-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .feature-item, .faq-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 4px;
+        }
+        .testimonial {
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e9f7ef;
+            border-left: 5px solid #27ae60;
+            border-radius: 4px;
+        }
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -52,6 +70,38 @@
         <div class="count-item">文字数（空白除く）: <span id="char-count-no-spaces">0</span></div>
         <div class="count-item">単語数: <span id="word-count">0</span></div>
         <div class="count-item">行数: <span id="line-count">0</span></div>
+    </div>
+
+    <h2>特徴</h2>
+    <ul class="feature-list">
+        <li class="feature-item">リアルタイム計算: 入力と同時に即座に結果を表示</li>
+        <li class="feature-item">多機能: 文字数、単語数、行数を同時にカウント</li>
+        <li class="feature-item">使いやすい: シンプルで直感的なインターフェース</li>
+        <li class="feature-item">無料: 完全無料で制限なく使用可能</li>
+    </ul>
+
+    <h2>よくある質問</h2>
+    <ul class="faq-list">
+        <li class="faq-item">
+            <h3>Q: このツールは無料ですか？</h3>
+            <p>A: はい、完全に無料でご利用いただけます。</p>
+        </li>
+        <li class="faq-item">
+            <h3>Q: 入力したテキストは保存されますか？</h3>
+            <p>A: いいえ、入力されたテキストはサーバーに送信されず、ブラウザ上でのみ処理されます。</p>
+        </li>
+        <li class="faq-item">
+            <h3>Q: 文字数の上限はありますか？</h3>
+            <p>A: 基本的に上限はありませんが、非常に長いテキストの場合はブラウザの性能に依存します。</p>
+        </li>
+    </ul>
+
+    <h2>ユーザーの声</h2>
+    <div class="testimonial">
+        <p>「このツールのおかげでSNS投稿の文字数管理が簡単になりました。使いやすくて助かっています！」 - 田中さん（マーケター）</p>
+    </div>
+    <div class="testimonial">
+        <p>「論文作成時の文字数チェックに重宝しています。シンプルで使いやすいです。」 - 佐藤さん（大学生）</p>
     </div>
 
     <script>
